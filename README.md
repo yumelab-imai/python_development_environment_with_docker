@@ -1,5 +1,5 @@
 ## What is it? 🧐
-A repository for setting up Python development environments on your personal computer using Docker. This allows you to create environments tailored for Python web scraping, interfacing with the LINE API, working with specific e-commerce data, or using advanced AI tools like Chat GPT.
+A repository for setting up Python development environments on your personal computer using Docker. This allows you to create environments tailored for Python web scraping or using advanced AI tools like Chat GPT.
 
 Designed to work on a MacBook Air with the M2 chip.
 
