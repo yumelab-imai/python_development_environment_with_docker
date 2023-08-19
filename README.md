@@ -1,46 +1,56 @@
-## What it is?🧐
-A repository for building Python development environments on your own PC using Docker.
-This allows you to build an environment for scraping Python and LINE APIs, or for specific data on e-commerce sites, or to use AI tools such as Chat GPT at a more advanced level.
+## What is it? 🧐
+A repository for setting up Python development environments on your personal computer using Docker. This allows you to create environments tailored for Python web scraping, interfacing with the LINE API, working with specific e-commerce data, or using advanced AI tools like Chat GPT.
 
-To set up a generic environment - using the Mac book Air's M2 chip.
+Designed to work on a MacBook Air with the M2 chip.
 
+## How to Use It? 🧐
 
-## How to use it ?🧐
-
-<!--  root  -->
+### Step 1: Clone the Repository
 ```
-<!--  クローン  -->
 git clone https://github.com/yumelab-imai/python_development_environment_with_docker.git
-<!--  移動  -->
+```
+
+### Step 2: Navigate to the Directory
+```
 cd python_development_environment_with_docker/
-<!-- イメージとコンテナの作成、コンテナの起動を実行 -->
-docker compose up -d --build
-<!-- コンテナが正常に起動したか確認 -->
+```
+
+### Step 3: Build the Image and Start the Container
+```
+docker-compose up -d --build
+```
+
+### Step 4: Check if the Container Started Successfully
+```
 docker container ls
-// CONTAINER ID   IMAGE                 COMMAND                  CREATED          STATUS          PORTS                    NAMES
-// 123445   jupyterlab-test-img   "jupyter-lab --ip 0.…"   13 seconds ago   Up 13 seconds   0.0.0.0:6666->6666/tcp   dev-jupyterlab
-Python環境（コンテナ内）へ接続
-docker compose exec -it jupyterlab bash
-<!-- 動作確認(Heloo world を表示) -->
+```
+If successful, you should see an output similar to:
+```
+CONTAINER ID   IMAGE                COMMAND                 CREATED          STATUS          PORTS                    NAMES
+123445        jupyterlab-test-img   "jupyter-lab --ip 0.…"  13 seconds ago   Up 13 seconds   0.0.0.0:6666->6666/tcp   dev-jupyterlab
+```
+
+### Step 5: Connect to the Python Environment inside the Container
+```
+docker-compose exec jupyterlab bash
+```
+
+### Step 6: Test the Environment
+```
 python3 sample.py
 ```
 
+### To Check JupyterLab Token:
 ```
-Jupyterlab の「token」確認
 docker logs jupyterlab-test | tail
 ```
 
+## Reference URL
+[How to setup Python with Docker](https://www.kagoya.jp/howto/cloud/container/dockerpython/)
 
-## 参考 URL
-https://www.kagoya.jp/howto/cloud/container/dockerpython/
-
-
-## ライブラリ補足
-| モジュール | 用途 |
-| -------- | -------- |
-| pandas | CSV出力 |
-| requests | 楽天市場の情報取得 |
-| selenium | amazonの情報取得 |
-| time | 処理の遅延（sleep） |
-| selenium Select | ドロップダウンリストの操作 |
-| BeautifulSoup | HTML解析（"味噌汁生成"） |
+## Library Information
+| Module        | Purpose                 |
+| ------------- | ----------------------- |
+| pandas        | CSV Output               |
+| requests      | Fetching data from Rakuten Marketplace |
+| BeautifulSoup | HTML Parsing             |
