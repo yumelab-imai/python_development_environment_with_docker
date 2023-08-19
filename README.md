@@ -52,5 +52,5 @@ docker logs jupyterlab-test | tail
 | Module        | Purpose                 |
 | ------------- | ----------------------- |
 | pandas        | CSV Output               |
-| requests      | Fetching data from Rakuten Marketplace |
+| requests      | Fetching data |
 | BeautifulSoup | HTML Parsing             |
