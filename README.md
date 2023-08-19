@@ -40,10 +40,6 @@ docker-compose exec jupyterlab bash
 python3 sample.py
 ```
 
-### To Check JupyterLab Token:
-```
-docker logs jupyterlab-test | tail
-```
 
 ## Reference URL
 [How to setup Python with Docker](https://www.kagoya.jp/howto/cloud/container/dockerpython/)
